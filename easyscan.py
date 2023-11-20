@@ -58,7 +58,7 @@ def my_loading():
 ### DEF SECTION
 def perform_super_stealthy_recon(IP, port):
     print("In super stealth recon mode you must indicate which Ports you want to perform the scan")
-    command = f'nmap -sS -T4 -p{port} --open --reason --script=default {IP} -oN port_scanning.txt'
+    command = f'nmap -D RND:10 -sS -T4 -p{port} --open --reason --script=default {IP} -oN port_scanning.txt'
     subprocess.run(command, shell=True)
     print("Super Stealthy port scanning completed.")
 
