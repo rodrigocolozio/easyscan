@@ -64,7 +64,7 @@ Tailor your scanning approach with four distinct modes, catering to a variety of
 </pre>
 2. Change directory to where you've cloned it
 <pre>
-    cd <your_directory>
+    cd your_directory
 </pre>
 3. Make it executable
 <pre>
