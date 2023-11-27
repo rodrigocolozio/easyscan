@@ -7,53 +7,15 @@ import cowsay
 import time
 
 # boring animation
-def my_loading():
-    print('|                      |')
-    time.sleep(0.5)
-    print('|x                     |')
-    time.sleep(0.5)
-    print('|xx                    |')
-    time.sleep(0.5)
-    print('|xxx                   |')
-    time.sleep(0.5)
-    print('|xxxx                  |')
-    time.sleep(0.5)
-    print('|xxxxx                 |')
-    time.sleep(0.5)
-    print('|xxxxxx                |')
-    time.sleep(0.5)
-    print('|xxxxxxx               |')
-    time.sleep(0.5)
-    print('|xxxxxxxx              |')
-    time.sleep(0.5)
-    print('|xxxxxxxxx             |')
-    time.sleep(0.5)
-    print('|xxxxxxxxxx            |')
-    time.sleep(0.5)
-    print('|xxxxxxxxxxx           |')
-    time.sleep(0.2)
-    print('|xxxxxxxxxxxx          |')
-    time.sleep(0.2)
-    print('|xxxxxxxxxxxxx         |')
-    time.sleep(0.2)
-    print('|xxxxxxxxxxxxxx        |')
-    time.sleep(0.2)
-    print('|xxxxxxxxxxxxxxx       |')
-    time.sleep(0.2)
-    print('|xxxxxxxxxxxxxxxx      |')
-    time.sleep(0.2)
-    print('|xxxxxxxxxxxxxxxxx     |')
-    time.sleep(0.2)
-    print('|xxxxxxxxxxxxxxxxxx    |')
-    time.sleep(0.2)
-    print('|xxxxxxxxxxxxxxxxxxx   |')
-    time.sleep(0.2)
-    print('|xxxxxxxxxxxxxxxxxxxx  |')
-    time.sleep(0.2)
-    print('|xxxxxxxxxxxxxxxxxxxxx |')
-    time.sleep(0.2)
-    print('|xxxxxxxxxxxxxxxxxxxxxx|\n\n')
-
+def welcome_art():
+    print('''
+ ___________________________________________________________   __
+___  ____/__    |_  ___/__  ____/_  ___/_  ____/__    |__  | / /
+__  __/  __  /| |____ \__  __/  _____ \_  /    __  /| |_   |/ / 
+_  /___  _  ___ |___/ /_  /___  ____/ // /___  _  ___ |  /|  /  
+/_____/  /_/  |_/____/ /_____/  /____/ \____/  /_/  |_/_/ |_/   
+                                                                                                      
+          ''')
 
 ### DEF SECTION
 def perform_super_stealthy_recon(IP, port):
@@ -107,7 +69,8 @@ def display_help_menu():
 ### MAIN
 def main():
     # header
-    my_loading()
+    welcome_art()
+    time.sleep(2)
     cowsay.daemon(                    "WELCOME\nTO\nEASYSCAN")
     print("This script streamlines and automates the port scanning process, providing a more user-friendly experience.")
     print("If you want help with the tool feel free to type '--help' for assistance\n\n")
