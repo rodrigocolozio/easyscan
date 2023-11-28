@@ -20,17 +20,17 @@ _  /___  _  ___ |___/ /_  /___  ____/ // /___  _  ___ |  /|  /
 ### DEF SECTION
 def perform_super_stealthy_recon(IP, port):
     print("In super stealth recon mode you must indicate which Ports you want to perform the scan")
-    command = f'nmap -D RND:10 -sS -T4 -p{port} --open --reason --script=default {IP} -oN port_scanning.txt'
+    command = f'nmap -D RND:10 -sS -T1 -p{port} --open --reason --script=default {IP} -oN port_scanning.txt'
     subprocess.run(command, shell=True)
     print("Super Stealthy port scanning completed.")
 
 def perform_stealthy_recon(IP):
-    command = f'nmap {IP} -sS -T4 --open -oN port_scanning.txt'
+    command = f'nmap {IP} -sS -T2 --open -oN port_scanning.txt'
     subprocess.run(command, shell=True)
     print("Stealthy port scanning completed.")
 
 def perform_aggressive_recon(IP):
-    command = f'nmap {IP} -T4 -A -sC -sV --traceroute -oN port_scanning.txt'
+    command = f'nmap {IP} -T5 -A -sC -sV --traceroute -oN port_scanning.txt'
     subprocess.run(command, shell=True)
     print("Aggressive port scanning completed.")
 
